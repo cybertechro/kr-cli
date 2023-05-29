@@ -125,13 +125,13 @@ const executionJob = async function(browser, path, options) {
                         log("The path of report is not found or invalid. Please try again with --report or -rp <path>!", true);
                     }
                 } else {
-                    log("The path is not valid. Please try again!", true);
+                    log("No valid files found in " + dirname, true);
                 }
             } else {
-                log("The path is not valid. Please try again!", true);
+                log("No files found in " + dirname, true);
             }
         } else {
-            log("The path is not valid. Please try again!", true);
+            log("Path " + dirname + " does not exist", true);
         }
 
     } catch (error) {
