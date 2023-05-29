@@ -166,13 +166,13 @@ const executionDevJob = async function(browser, options) {
                             .then((driver) => socketExecution(driver, filesMap, undefined, undefined, options.logger ? options.logger : false));
                     }
                 } else {
-                    log("The path is not valid. Please try again!", true);
+                    log("No files found in " + dirname, true);
                 }
             } else {
-                log("The path is not valid. Please try again!", true);
+                log("No valid files found in " + dirname, true);
             }
         } else {
-            log("The path is not valid. Please try again!", true);
+            log("The " + dirname + " does not exists", true);
         }
 
     } catch (error) {
