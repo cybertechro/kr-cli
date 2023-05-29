@@ -67,7 +67,10 @@ const checkExistsFile = function(path) {
 const checkFormatedFile = function(path) {
     try {
         let formatting = path.split('.').pop().toLowerCase();
-        if (formatting === "html") {
+        if (
+            formatting === "html" ||
+            formatting === "krecorder"
+        ) {
             return true;
         } else {
             return false;
