@@ -1,1 +1,1 @@
-kr-cli run chrome tests --report=reports
+kr-cli run chrome tests --report=report
