@@ -17,9 +17,11 @@ const openBrowser = async(browser) => {
         case 'chrome':
             {
                 const options = new chrome.Options();
+                options.addArguments("--no-sandbox");
                 options.addArguments("--enable-automation");
                 options.addArguments('--headless=new');
                 options.addArguments('--disable-dev-shm-usage');
+                options.addArguments("--disable-gpu");
                 options.addExtensions(encode("katalon-recorder/kr-chrome.crx"));
                 driver.withCapabilities(webdriver.Capabilities.chrome())
                 .setChromeOptions(options);
