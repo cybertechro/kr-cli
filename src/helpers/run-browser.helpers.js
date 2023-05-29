@@ -18,11 +18,11 @@ const openBrowser = async(browser) => {
             {
                 const options = new chrome.Options();
                 options.addArguments("--enable-automation");
+                options.addArguments('--headless=new');
+                options.addArguments('--disable-dev-shm-usage');
                 options.addExtensions(encode("katalon-recorder/kr-chrome.crx"));
-
                 driver.withCapabilities(webdriver.Capabilities.chrome())
                 .setChromeOptions(options);
-
                 break;
             }
         case 'firefox':
